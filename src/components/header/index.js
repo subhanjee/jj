@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-[#324f41] py-3 px-6 rounded-full flex items-center justify-between border border-[#1A3A2A]">
+    <nav className="bg-[#202523] py-3 px-6   flex items-center justify-between border border-[#1A3A2A]">
       {/* Left - Logo */}
       <div className="flex items-center space-x-2 ">
         <img
@@ -58,7 +58,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-[#0D1E16] p-5 flex flex-col space-y-4 text-white border-t border-[#1A3A2A] md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-[#0D1E16] p-6   flex flex-col space-y-4 text-white border-t border-[#1A3A2A] md:hidden">
               <li className="text-[#00FFAA] cursor-pointer">$Presale</li>
         <li className="hover:text-[#00FFAA] cursor-pointer">Feature</li>
         <li className="hover:text-[#00FFAA] cursor-pointer">TOKENOMICS</li>

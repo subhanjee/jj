@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[10px_1fr_10px] items-center bg-[#262b2d]   min-h-screen p-5 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
+    // className="bg-[#262b2d] "
+      className={`bg-[#181818] min-h-screen * ${geistSans.variable} ${geistMono.variable} font-sans`}
     >
     <LandingPage/>
    
