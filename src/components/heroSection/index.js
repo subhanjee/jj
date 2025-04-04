@@ -3,7 +3,7 @@ import React from 'react'
 function HeroSection() {
   return (
     <>
-    <div className='  min-h-screen flex flex-col items-center justify-center text-white' style={{ backgroundImage: "url('https://img.freepik.com/free-photo/3d-abstract-background-with-flowing-hexagonal-grid-design_1048-11285.jpg?t=st=1743754360~exp=1743757960~hmac=c461863c7bae8fae2bbe26aba3d48acae2934c5c63c8f9aff7f53f548d3263d8&w=1380')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className='  min-h-screen flex flex-col items-center justify-center text-white' style={{ backgroundImage: "url('https://img.freepik.com/free-photo/3d-abstract-background-with-flowing-hexagonal-grid-design_1048-11285.jpg?t=st=1743754360~exp=1743757960~hmac=c461863c7bae8fae2bbe26aba3d48acae2934c5c63c8f9aff7f53f548d3263d8&w=1380')", backgroundSize: 'cover', backgroundPosition: 'center',backgroundRepeat: 'no-repeat' }}>
       <h1 className=' text-3xl text-center font-mono mt-16   md:text-5xl lg:text-7xl'>Build for Bitcoin</h1>
       <p className='text-1xl md:text-2xl lg:2xl'>Enhance Bitcoins economy using secure
       </p>
@@ -41,11 +41,11 @@ function HeroSection() {
 
         {/* Currency Selection */}
         <div className="flex justify-center gap-4 mt-4">
-          <button className="flex items-center gap-2 bg-gray-800 px-4 py-2 rounded-lg">
-            <span>🪙</span> ETH
+          <button className="flex items-center gap-2 bg-gray-800 px-8 py-2 rounded-full">
+            <img src='https://cryptologos.cc/logos/ethereum-eth-logo.png' alt='abc' className=' w-5 h-5'  /> ETH
           </button>
-          <button className="flex items-center gap-2 bg-orange-500 px-4 py-2 rounded-lg">
-            <span>💵</span> USDT
+          <button className="flex items-center gap-2 bg-orange-500 px-8 py-2  rounded-full">
+          <img src='https://cdn3d.iconscout.com/3d/premium/thumb/tether-usdt-coin-3d-icon-download-in-png-blend-fbx-gltf-file-formats--cryptocurrency-pack-science-technology-icons-6044470.png' alt='abc' className=' w-5 h-5'  /> USDT
           </button>
         </div>
 
