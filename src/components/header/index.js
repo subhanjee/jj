@@ -21,11 +21,11 @@ export default function Navbar() {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex items-center space-x-6 text-white font-medium">
-        <li className="text-[#00FFAA] cursor-pointer">$Presale</li>
-        <li className="hover:text-[#00FFAA] cursor-pointer">Feature</li>
-        <li className="hover:text-[#00FFAA] cursor-pointer">TOKENOMICS</li>
-        <li className="hover:text-[#00FFAA] cursor-pointer">ROADMAP</li>
-        <li className="hover:text-[#00FFAA] cursor-pointer">FAQ</li>
+      <li className="text-orange-500 cursor-pointer">$Presale</li>
+        <li className="hover:text-orange-500 cursor-pointer">Feature</li>
+        <li className="hover:text-orange-500 cursor-pointer">TOKENOMICS</li>
+        <li className="hover:text-orange-500 cursor-pointer">ROADMAP</li>
+        <li className="hover:text-orange-500 cursor-pointer">FAQ</li>
 
         {/* Dropdown */}
         <li
@@ -44,7 +44,7 @@ export default function Navbar() {
       </ul>
 
       {/* CTA Button */}
-      <button className="hidden md:flex bg-[#00FFAA] text-[#0D1E16] px-5 py-2 rounded-full flex items-center font-medium hover:bg-[#00D996]">
+      <button className="hidden md:flex bg-orange-500 text-white px-5 py-2 rounded-full flex items-center font-medium hover:bg-orange-500">
         Join Satochain
       </button>
 
@@ -59,16 +59,16 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-[#0D1E16] p-6   flex flex-col space-y-4 text-white border-t border-[#1A3A2A] md:hidden">
-              <li className="text-[#00FFAA] cursor-pointer">$Presale</li>
-        <li className="hover:text-[#00FFAA] cursor-pointer">Feature</li>
-        <li className="hover:text-[#00FFAA] cursor-pointer">TOKENOMICS</li>
-        <li className="hover:text-[#00FFAA] cursor-pointer">ROADMAP</li>
-        <li className="hover:text-[#00FFAA] cursor-pointer">FAQ</li>
+              <a className="text-orange-500 cursor-pointer">$Presale</a>
+        <a className="hover:text-orange-500 cursor-pointer">Feature</a>
+        <a className="hover:text-orange-500 cursor-pointer">TOKENOMICS</a>
+        <a className="hover:text-orange-500 cursor-pointer">ROADMAP</a>
+        <a className="hover:text-orange-500 cursor-pointer">FAQ</a>
 
           {/* Dropdown for Mobile */}
           <div className="relative">
             <button
-              className="flex items-center hover:text-[#00FFAA] w-full"
+              className="flex items-center hover:text-orange-500 w-full"
               onClick={() => setDropdownOpen(!isDropdownOpen)}
             >
               {/* More <ChevronDown className="ml-1 h-4 w-4" /> */}
@@ -86,7 +86,7 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button in Mobile */}
-          <button className="bg-[#00FFAA] text-[#0D1E16] px-5 py-2  rounded-full flex justify-center items-center font-medium hover:bg-[#00D996]">
+          <button className="bg-orange-500 text-[#0D1E16] px-5 py-2  rounded-full flex justify-center items-center font-medium hover:bg-[#00D996]">
             Join Satochain
           </button>
         </div>
