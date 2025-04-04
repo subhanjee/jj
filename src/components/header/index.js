@@ -8,19 +8,24 @@ export default function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-[#0D1E16] py-3 px-6 rounded-full flex items-center justify-between border border-[#1A3A2A]">
+    <nav className="bg-[#324f41] py-3 px-6 rounded-full flex items-center justify-between border border-[#1A3A2A]">
       {/* Left - Logo */}
-      <div className="flex items-center space-x-4">
-        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/ethena-cryptocurrency-3d-icon-download-in-png-blend-fbx-gltf-file-formats--ena-digital-crypto-coins-v1-pack-science-technology-icons-9544597.png?f=webp" alt="Athene" className="h-10 w-10" />
-        <span className="text-white font-semibold text-lg">ATHENE</span>
+      <div className="flex items-center space-x-2 ">
+        <img
+          src="https://satochain.io/images/logo.svg"
+          alt="Athene"
+          className="h-10 w-10"
+        />
+        <span className="text-white font-semibold text-lg">Satochain</span>
       </div>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex items-center space-x-6 text-white font-medium">
-        <li className="text-[#00FFAA] cursor-pointer">Home</li>
-        <li className="hover:text-[#00FFAA] cursor-pointer">Roadmap</li>
-         <li className="hover:text-[#00FFAA] cursor-pointer">Partner & Community</li>
-        <li className="hover:text-[#00FFAA] cursor-pointer">About Us</li>
+        <li className="text-[#00FFAA] cursor-pointer">$Presale</li>
+        <li className="hover:text-[#00FFAA] cursor-pointer">Feature</li>
+        <li className="hover:text-[#00FFAA] cursor-pointer">TOKENOMICS</li>
+        <li className="hover:text-[#00FFAA] cursor-pointer">ROADMAP</li>
+        <li className="hover:text-[#00FFAA] cursor-pointer">FAQ</li>
 
         {/* Dropdown */}
         <li
@@ -40,7 +45,7 @@ export default function Navbar() {
 
       {/* CTA Button */}
       <button className="hidden md:flex bg-[#00FFAA] text-[#0D1E16] px-5 py-2 rounded-full flex items-center font-medium hover:bg-[#00D996]">
-      Join Athene Apps
+        Join Satochain
       </button>
 
       {/* Mobile Menu Button */}
@@ -48,17 +53,18 @@ export default function Navbar() {
         className="md:hidden text-white"
         onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
       >
-        {isMobileMenuOpen ? "X" :  "Menu"}
+        {isMobileMenuOpen ? "X" : "Menu"}
       </button>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-[#0D1E16] p-5 flex flex-col space-y-4 text-white border-t border-[#1A3A2A] md:hidden">
-          <a href="#" className="hover:text-[#00FFAA]">Home</a>
-          <a href="#" className="hover:text-[#00FFAA]">Roadmap</a>
-           <a href="#" className="hover:text-[#00FFAA]">Partner & Community</a>
-          <a href="#" className="hover:text-[#00FFAA]">About Us</a>
-          
+              <li className="text-[#00FFAA] cursor-pointer">$Presale</li>
+        <li className="hover:text-[#00FFAA] cursor-pointer">Feature</li>
+        <li className="hover:text-[#00FFAA] cursor-pointer">TOKENOMICS</li>
+        <li className="hover:text-[#00FFAA] cursor-pointer">ROADMAP</li>
+        <li className="hover:text-[#00FFAA] cursor-pointer">FAQ</li>
+
           {/* Dropdown for Mobile */}
           <div className="relative">
             <button
@@ -69,15 +75,19 @@ export default function Navbar() {
             </button>
             {isDropdownOpen && (
               <div className="mt-2 pl-4 space-y-2">
-                <a href="#" className="block hover:text-[#00FFAA]">Option 1</a>
-                <a href="#" className="block hover:text-[#00FFAA]">Option 2</a>
+                <a href="#" className="block hover:text-[#00FFAA]">
+                  Option 1
+                </a>
+                <a href="#" className="block hover:text-[#00FFAA]">
+                  Option 2
+                </a>
               </div>
             )}
           </div>
 
           {/* CTA Button in Mobile */}
           <button className="bg-[#00FFAA] text-[#0D1E16] px-5 py-2  rounded-full flex justify-center items-center font-medium hover:bg-[#00D996]">
-            Join Athene Apps
+            Join Satochain
           </button>
         </div>
       )}
