@@ -3,7 +3,7 @@ import React from 'react'
 function HeroSection() {
   return (
     <>
-    <div className='  min-h-screen flex flex-col items-center justify-center text-white'>
+    <div className='  min-h-screen flex flex-col items-center justify-center text-white' style={{ backgroundImage: "url('https://img.freepik.com/free-photo/3d-abstract-background-with-flowing-hexagonal-grid-design_1048-11285.jpg?t=st=1743754360~exp=1743757960~hmac=c461863c7bae8fae2bbe26aba3d48acae2934c5c63c8f9aff7f53f548d3263d8&w=1380')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <h1 className=' text-3xl text-center font-mono mt-16   md:text-5xl lg:text-7xl'>Build for Bitcoin</h1>
       <p className='text-1xl md:text-2xl lg:2xl'>Enhance Bitcoins economy using secure
       </p>
