@@ -7,7 +7,7 @@ function LandingPage() {
   return (
     <div>
       <Header/>
-      {/* <HeroSection/> */}
+      <HeroSection/>
       {/* <Footer/> */}
     </div>
   )
