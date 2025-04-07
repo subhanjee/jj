@@ -14,13 +14,13 @@ function HeroSection() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1 className=" text-3xl text-center font-mono mt-16   md:text-5xl lg:text-7xl">
+        <h1 className=" text-3xl text-center font-mono mt-16   md:text-5xl lg:text-8xl">
           Build for Bitcoin
         </h1>
-        <p className="text-1xl md:text-2xl lg:2xl">
+        <p className="text-1xl md:text-2xl lg:3xl mt-5">
           Enhance Bitcoins economy using secure
         </p>
-        <p className="text-1xl md:text-2xl lg:2xl">
+        <p className="text-1xl md:text-2xl lg:3xl">
           Bitcoin-based apps and smart contracts
         </p>
         <div className="flex items-center justify-center min-h-screen  ">

@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-[#202523] py-3 px-6   flex items-center justify-between border border-[#1A3A2A]">
+    <nav className="bg-black py-3 px-6   flex items-center justify-between shadow-lg shadow-white">
       {/* Left - Logo */}
       <div className="flex items-center space-x-2 ">
         <img
@@ -23,9 +23,10 @@ export default function Navbar() {
       <ul className="hidden md:flex items-center space-x-6 text-white font-medium">
       <a href="#heroSection" className="text-orange-500 cursor-pointer">$Presale</a>
         <a className="hover:text-orange-500 cursor-pointer">Feature</a>
-        <a className="hover:text-orange-500 cursor-pointer">TOKENOMICS</a>
-        <a className="hover:text-orange-500 cursor-pointer">ROADMAP</a>
-        <a className="hover:text-orange-500 cursor-pointer">FAQ</a>
+        <a className="hover:text-orange-500 cursor-pointer">Tokenomics</a>
+        <a className="hover:text-orange-500 cursor-pointer">RoadMap</a>
+        <a className="hover:text-orange-500 cursor-pointer">FAQs</a>
+        <a className="hover:text-orange-500 cursor-pointer">Bridge</a>
 
         {/* Dropdown */}
         <li
