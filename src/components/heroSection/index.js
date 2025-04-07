@@ -25,10 +25,6 @@ function HeroSection() {
         </p>
         <div className="flex items-center justify-center min-h-screen  ">
           <div className="w-[350px] md:w-[500px] bg-[#1a1a1a] text-white rounded-xl p-6 shadow-lg">
-            {/* Header */}
-            <h2 className="text-center text-2xl font-bold">
-              Stage 1 - Buy Satochain Now
-            </h2>
             <p className="text-center text-sm text-gray-400">
               Until price increase
             </p>
@@ -37,7 +33,7 @@ function HeroSection() {
             <div className="border border-gray-600 rounded-lg p-3 mt-4 flex justify-between">
               <div>
                 <p className="text-xs text-gray-400">Listing Date</p>
-                <p className="font-semibold">June 30, 2025</p>
+                <p className="font-semibold">Aprl 20, 2025</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400">Listing Price</p>
@@ -48,7 +44,7 @@ function HeroSection() {
             {/* Price Info */}
             <div className="mt-4">
               <p className="text-sm text-gray-400">Current Price:</p>
-              <p className="text-lg font-semibold">$0.001</p>
+              <p className="text-lg font-semibold">$0.0007</p>
               <div className="w-full h-1 bg-gray-700 rounded mt-2"></div>
             </div>
 
