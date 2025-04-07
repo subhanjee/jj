@@ -1,20 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import { Copy } from 'lucide-react';
+import { Copy, QrCode } from 'lucide-react';
+import QRCode from 'react-qr-code';
 
 export default function USDTDeposit() {
-  const [activeTab, setActiveTab] = useState('deposit');
+  const [isQRModalOpen, setIsQRModalOpen] = useState(false);
   const depositAddress = '0x864817e3071a1da8d2c6917ee1301e5a92e6b373';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(depositAddress);
-    alert('Address copied!');
+    alert('Address copied to clipboard!');
   };
 
   return (
-    <div className=" text-white flex justify-center ">
-      <div className="w-full max-w-xl  rounded-xl  p-6 space-y-6">
+    <div className=" text-white flex justify-center items-start ">
+      <div className="w-full rounded-xl  p-6 space-y-6">
         {/* Tabs */}
         <div className="flex space-x-4">
           {['Deposit USDT', 'Withdraw USDT', 'Reward'].map((tab, i) => (
@@ -22,10 +23,9 @@ export default function USDTDeposit() {
               key={tab}
               className={`px-4 py-2 rounded-full font-semibold transition ${
                 i === 0
-                  ? 'bg-orange-500 text-black'
+                  ? 'bg-orange-500 text-white'
                   : 'bg-[#3b3f42] hover:bg-[#505458]'
               }`}
-              onClick={() => setActiveTab(tab.toLowerCase())}
             >
               {tab}
             </button>
@@ -52,30 +52,21 @@ export default function USDTDeposit() {
         <div className="space-y-2">
           <p className="text-sm text-gray-300">Your Deposit Address</p>
           <div className="flex items-center justify-between bg-[#1e1e1e] border border-gray-600 rounded-lg px-4 py-3">
-            <span className="text-sm break-all text-white">
+            <span className="text-sm break-all text-orange-500">
               {depositAddress}
             </span>
             <div className="flex gap-2">
               <button
                 onClick={handleCopy}
-                className="bg-orange-500 text-black px-2 py-1 rounded-md text-xs hover:bg-orange-300"
+                className="bg-orange-500 text-black px-2 py-1 rounded-md text-xs hover:bg-orange-500"
               >
                 <Copy size={14} />
               </button>
-              <button className="bg-orange-500 text-black px-2 py-1 rounded-md text-xs hover:bg-orange-300">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 7h.01M7 11h.01M7 15h.01M11 7h.01M11 11h.01M11 15h.01M15 7h.01M15 11h.01M15 15h.01"
-                  />
-                </svg>
+              <button
+                onClick={() => setIsQRModalOpen(true)}
+                className="bg-orange-500 text-black px-2 py-1 rounded-md text-xs hover:bg-orange-500"
+              >
+                <QrCode size={14} />
               </button>
             </div>
           </div>
@@ -115,9 +106,25 @@ export default function USDTDeposit() {
             <span>Receiving Wallet</span>
             <span>Status</span>
           </div>
-          {/* You can map deposit data here */}
         </div>
       </div>
+
+      {/* QR Code Modal */}
+      {isQRModalOpen && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+          <div className="bg-white text-black rounded-lg p-6 w-80 text-center relative">
+            <h2 className="text-lg font-bold mb-4">Scan QR Code</h2>
+            <QRCode value={depositAddress} size={200} />
+            <p className="mt-3 text-sm break-words">{depositAddress}</p>
+            <button
+              onClick={() => setIsQRModalOpen(false)}
+              className="absolute top-2 right-2 text-sm px-2 py-1 rounded-full bg-red-500 text-white hover:bg-red-600"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
