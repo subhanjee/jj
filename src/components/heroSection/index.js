@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import USDTDeposit from "../USDTDeposit";
 
 function HeroSection() {
-  const [selectedCurrency, setSelectedCurrency] = useState('ETH');
-  const [amount, setAmount] = useState('');
+  const [selectedCurrency, setSelectedCurrency] = useState("ETH");
+  const [amount, setAmount] = useState("");
   const [tokenAmount, setTokenAmount] = useState(0);
 
   const ethToUSD = 3200; // Example ETH to USD rate
@@ -14,7 +14,7 @@ function HeroSection() {
 
   const handleCurrencySelect = (currency) => {
     setSelectedCurrency(currency);
-    setAmount('');
+    setAmount("");
     setTokenAmount(0);
   };
 
@@ -22,7 +22,8 @@ function HeroSection() {
     const value = parseFloat(e.target.value) || 0;
     setAmount(e.target.value);
 
-    const usdValue = value * (selectedCurrency === 'ETH' ? ethToUSD : usdtToUSD);
+    const usdValue =
+      value * (selectedCurrency === "ETH" ? ethToUSD : usdtToUSD);
     setTokenAmount((usdValue / satoPrice).toFixed(0));
   };
 
@@ -81,16 +82,16 @@ function HeroSection() {
               1 $SATO ={" "}
               <span className="text-orange-500 font-semibold">$0.0007</span>
             </p>
-<div>
-  <USDTDeposit/>
-</div>
+            <div>
+              <USDTDeposit />
+            </div>
             <div className="flex justify-center gap-4 mt-4">
-            <button
-            className={`flex items-center gap-2 px-8 py-2 rounded-full ${
-              selectedCurrency === 'ETH' ? 'bg-orange-500' : 'bg-gray-800'
-            }`}
-            onClick={() => handleCurrencySelect('ETH')}
-          >
+              <button
+                className={`flex items-center gap-2 px-8 py-2 rounded-full ${
+                  selectedCurrency === "ETH" ? "bg-orange-500" : "bg-gray-800"
+                }`}
+                onClick={() => handleCurrencySelect("ETH")}
+              >
                 <img
                   src="https://cryptologos.cc/logos/ethereum-eth-logo.png"
                   alt="ETH"
@@ -99,11 +100,11 @@ function HeroSection() {
                 ETH
               </button>
               <button
-            className={`flex items-center gap-2 px-8 py-2 rounded-full ${
-              selectedCurrency === 'USDT' ? 'bg-orange-500' : 'bg-gray-800'
-            }`}
-            onClick={() => handleCurrencySelect('USDT')}
-          >
+                className={`flex items-center gap-2 px-8 py-2 rounded-full ${
+                  selectedCurrency === "USDT" ? "bg-orange-500" : "bg-gray-800"
+                }`}
+                onClick={() => handleCurrencySelect("USDT")}
+              >
                 <img
                   src="https://cdn3d.iconscout.com/3d/premium/thumb/tether-usdt-coin-3d-icon-download-in-png-blend-fbx-gltf-file-formats--cryptocurrency-pack-science-technology-icons-6044470.png"
                   alt="USDT"
@@ -161,8 +162,14 @@ function HeroSection() {
                     readOnly
                     className="bg-transparent w-[6rem] md:w-[15rem] outline-none text-white"
                   />
-                  <span> <img src="https://satochain.io/images/minNft/chain.svg" alt="abc" className="w-5 h-5"
-                  /></span>
+                  <span>
+                    {" "}
+                    <img
+                      src="https://satochain.io/images/minNft/chain.svg"
+                      alt="abc"
+                      className="w-5 h-5"
+                    />
+                  </span>
                 </div>
               </div>
             </div>

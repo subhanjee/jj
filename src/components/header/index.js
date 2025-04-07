@@ -24,7 +24,7 @@ export default function Navbar() {
       <a href="#heroSection" className="text-orange-500 cursor-pointer">$Presale</a>
         <a className="hover:text-orange-500 cursor-pointer">Feature</a>
         <a className="hover:text-orange-500 cursor-pointer">Tokenomics</a>
-        <a className="hover:text-orange-500 cursor-pointer">RoadMap</a>
+        <a className="hover:text-orange-500 cursor-pointer">Roadmap</a>
         <a className="hover:text-orange-500 cursor-pointer">FAQs</a>
         <a className="hover:text-orange-500 cursor-pointer">Bridge</a>
 
