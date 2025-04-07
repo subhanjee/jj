@@ -21,11 +21,11 @@ export default function Navbar() {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex items-center space-x-6 text-white font-medium">
-      <li className="text-orange-500 cursor-pointer">$Presale</li>
-        <li className="hover:text-orange-500 cursor-pointer">Feature</li>
-        <li className="hover:text-orange-500 cursor-pointer">TOKENOMICS</li>
-        <li className="hover:text-orange-500 cursor-pointer">ROADMAP</li>
-        <li className="hover:text-orange-500 cursor-pointer">FAQ</li>
+      <a href="#heroSection" className="text-orange-500 cursor-pointer">$Presale</a>
+        <a className="hover:text-orange-500 cursor-pointer">Feature</a>
+        <a className="hover:text-orange-500 cursor-pointer">TOKENOMICS</a>
+        <a className="hover:text-orange-500 cursor-pointer">ROADMAP</a>
+        <a className="hover:text-orange-500 cursor-pointer">FAQ</a>
 
         {/* Dropdown */}
         <li

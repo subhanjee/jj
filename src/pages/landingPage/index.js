@@ -10,7 +10,7 @@ import React from 'react'
 function LandingPage() {
   return (
     <div>
-      <Header/>
+      <Header />
       <HeroSection/>
       <FeaturesSection/>
       <Unlocking/>
