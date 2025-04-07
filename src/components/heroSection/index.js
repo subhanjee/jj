@@ -23,8 +23,8 @@ function HeroSection() {
         <p className="text-1xl md:text-2xl lg:3xl">
           Bitcoin-based apps and smart contracts
         </p>
-        <div className="flex items-center justify-center min-h-screen  ">
-          <div className="w-[350px] md:w-[500px] bg-[#1a1a1a] text-white rounded-xl p-6 shadow-lg">
+        <div className="flex items-center justify-center min-h-screen font-mono ">
+          <div className="w-[350px] md:w-[500px] lg:w-[800px] bg-[#1a1a1a] text-white rounded-xl p-6 shadow-lg">
             {/* Header */}
             <h2 className="text-center text-2xl font-bold">
               Buy Satochain Now
@@ -105,9 +105,9 @@ function HeroSection() {
             </div>
 
             {/* Connect Wallet Button */}
-            <button className="w-full bg-orange-500 text-white py-3 mt-4 rounded-lg font-semibold">
+            {/* <button className="w-full bg-orange-500 text-white py-3 mt-4 rounded-lg font-semibold">
               CONNECT WALLET
-            </button>
+            </button> */}
 
             {/* Footer Link */}
             <p className="text-center mt-3 text-sm text-gray-400">

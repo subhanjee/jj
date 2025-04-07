@@ -16,7 +16,7 @@ export default function Navbar() {
           alt="Athene"
           className="h-10 w-10"
         />
-        <span className="text-white font-semibold text-lg">Satochain</span>
+        <span className="text-white font-semibold text-xl">Satochain</span>
       </div>
 
       {/* Desktop Menu */}
