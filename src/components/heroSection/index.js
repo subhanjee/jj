@@ -49,7 +49,7 @@ function HeroSection() {
             </div>
 
             {/* Raised Amount */}
-            <p className="mt-4 text-center text-lg font-bold">Raised $500,000</p>
+            <p className="mt-4 text-center text-lg font-bold">Raised $500,360</p>
             <p className="text-center text-sm">
               1 $SATO ={" "}
               <span className="text-orange-500 font-semibold">$0.002</span>
