@@ -1,6 +1,7 @@
 "use client"; // If you're using app directory in Next.js 13/14+
 
 import React, { useState } from "react";
+import USDTDeposit from "../USDTDeposit";
 
 function HeroSection() {
   const [selectedCurrency, setSelectedCurrency] = useState('ETH');
@@ -80,7 +81,9 @@ function HeroSection() {
               1 $SATO ={" "}
               <span className="text-orange-500 font-semibold">$0.0007</span>
             </p>
-
+<div>
+  <USDTDeposit/>
+</div>
             <div className="flex justify-center gap-4 mt-4">
             <button
             className={`flex items-center gap-2 px-8 py-2 rounded-full ${
