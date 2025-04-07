@@ -8,7 +8,7 @@ function HeroSection() {
         className="  min-h-screen flex flex-col items-center justify-center text-white"
         style={{
           backgroundImage:
-            "url('https://www.nordicinnovation.org/sites/default/files/styles/featured/public/2022-10/AdobeStock_413887439%20Blockchain.jpeg?h=2bde1c48&itok=q9Ni8UNh')",
+            "url('https://satochain.io/images/home/build-for-bitcoin.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
