@@ -9,7 +9,7 @@ function HeroSection() {
       </p>
       <p className='text-1xl md:text-2xl lg:2xl'>Bitcoin-based apps and smart contracts</p>
       <div className="flex items-center justify-center min-h-screen  ">
-      <div className="w-[450px] md:w-[500px] bg-[#1a1a1a] text-white rounded-xl p-6 shadow-lg">
+      <div className="w-[350px] md:w-[500px] bg-[#1a1a1a] text-white rounded-xl p-6 shadow-lg">
         {/* Header */}
         <h2 className="text-center text-2xl font-bold">Stage 1 - Buy Satochain Now</h2>
         <p className="text-center text-sm text-gray-400">Until price increase</p>
