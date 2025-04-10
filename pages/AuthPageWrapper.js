@@ -1,4 +1,4 @@
- import AuthPage from '@/src/components/Register'
+ import AuthPage from '@/src/components/register'
 import React from 'react'
 
 function AuthPageWrapper({onAuthSuccess}) {
