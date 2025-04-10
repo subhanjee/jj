@@ -2,7 +2,7 @@
  
  export default function Roadmap() {
     return (
-      <div className="min-h-screen bg-black text-white px-6 py-12 font-mono flex items-center justify-center flex-col">
+      <div id='roadmap' className="min-h-screen bg-black text-white px-6 py-12 font-mono flex items-center justify-center flex-col">
         {/* Left Side - Text */}
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-10 items-center max-w-8xl">
 
@@ -51,8 +51,9 @@
         {/* Right Side - Glowing Planet Effect */}
         <div className="relative mt-12 md:mt-0 w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[480px] lg:h-[480px] rounded-full bg-gradient-to-br from-orange-500 to-black shadow-[0_0_120px_60px_rgba(255,115,0,0.3)]" />
       </div>
-
+<div id='tokenomics' className="min-h-screen bg-black text-white px-6 py-12 font-mono flex items-center justify-center flex-col">
       <img src='https://satochain.io/images/home/tokenomics-new.webp' alt='tokenomics' className='w-full h-auto mt-10'/>
+      </div>
       </div>
     );
   }

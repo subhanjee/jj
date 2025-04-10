@@ -23,10 +23,10 @@ export default function Navbar() {
       {/* Desktop Menu */}
       <ul className="hidden md:flex items-center space-x-6 text-white font-medium">
       <a href="#heroSection" className="text-orange-500 cursor-pointer">$Presale</a>
-        <a className="hover:text-orange-500 cursor-pointer">Feature</a>
-        <a className="hover:text-orange-500 cursor-pointer">Tokenomics</a>
-        <a className="hover:text-orange-500 cursor-pointer">Roadmap</a>
-        <a className="hover:text-orange-500 cursor-pointer">FAQs</a>
+        <a href="#featuresSection" className="hover:text-orange-500 cursor-pointer">Feature</a>
+        <a href="#tokenomics" className="hover:text-orange-500 cursor-pointer">Tokenomics</a>
+        <a href="#roadmap" className="hover:text-orange-500 cursor-pointer">Roadmap</a>
+        <a href="#faqs" className="hover:text-orange-500 cursor-pointer">FAQs</a>
         <a className="hover:text-orange-500 cursor-pointer">Bridge</a>
 
         {/* Dropdown */}

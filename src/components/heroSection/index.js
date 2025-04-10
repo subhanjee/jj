@@ -61,7 +61,7 @@ function HeroSection() {
           Bitcoin-based apps and smart contracts
         </p>
 
-        <div className="flex items-center justify-center min-h-screen font-mono">
+        <div className="flex items-center justify-center min-h-screen font-mono ">
           <div className="w-[400px] md:w-[500px] lg:w-[800px] bg-[#262b2d] text-white rounded-xl p-6 shadow-lg">
             <h2 className="text-center text-2xl font-bold">Buy Satochain Now</h2>
             <p className="text-center text-sm text-gray-400">Until price increase</p>
@@ -73,7 +73,7 @@ function HeroSection() {
               </div>
               <div>
                 <p className="text-xs text-gray-400">Listing Price</p>
-                <p className="font-semibold">$0.1</p>
+                <p className="font-semibold">$0.0001</p>
               </div>
             </div>
 
@@ -100,9 +100,9 @@ function HeroSection() {
                 onClick={() => handleCurrencySelect("ETH")}
               >
                 <img
-                  src="https://cryptologos.cc/logos/ethereum-eth-logo.png"
+                  src="https://cdn.freelogovectors.net/wp-content/uploads/2020/03/ethereum-logo.png"
                   alt="ETH"
-                  className="w-5 h-5"
+                  className=" w-5 h-5 bg-white rounded-full p-1"
                 />
                 ETH
               </button>
@@ -143,12 +143,12 @@ function HeroSection() {
                     <img
                       src={
                         selectedCurrency === "ETH"
-                          ? "https://cryptologos.cc/logos/ethereum-eth-logo.png"
+                          ? "https://cdn.freelogovectors.net/wp-content/uploads/2020/03/ethereum-logo.png"
                           : "https://cdn3d.iconscout.com/3d/premium/thumb/tether-usdt-coin-3d-icon-download-in-png-blend-fbx-gltf-file-formats--cryptocurrency-pack-science-technology-icons-6044470.png"
                       }
                       alt={selectedCurrency}
-                      className="w-5 h-5"
-                    />
+                      className=" w-5 h-5 bg-white rounded-full p-1"
+                      />
                   </span>
                 </div>
               </div>
@@ -181,12 +181,12 @@ function HeroSection() {
             >
               Swap
             </button>
-
+{/* 
             <p className="text-center mt-3 text-sm text-gray-400">
               <a href="#" className="underline">
                 Refer a friend
               </a>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

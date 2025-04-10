@@ -44,7 +44,9 @@ export default function Faqs() {
   };
 
   return (
-    <div className="bg-black text-white py-12 px-4 min-h-screen">
+    <div 
+    id="faqs"
+    className="bg-black text-white py-12 px-4 min-h-screen">
       <h2 className="text-4xl font-bold text-center mb-10 font-mono">Faqs</h2>
       <div className="max-w-3xl mx-auto flex flex-col gap-4">
         {faqs.map((faq, index) => (
