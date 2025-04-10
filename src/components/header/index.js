@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 // import { ChevronDown, Download, Menu, X } from "lucide-react";
 
@@ -45,9 +46,11 @@ export default function Navbar() {
       </ul>
 
       {/* CTA Button */}
+      <Link href="AuthPageWrapper">
       <button className="hidden md:flex bg-orange-500 text-white px-5 py-2 rounded-full flex items-center font-medium hover:bg-orange-500">
         Join Satochain
       </button>
+      </Link>
 
       {/* Mobile Menu Button */}
       <button

@@ -1,16 +1,19 @@
-"use client"; // If you're using app directory in Next.js 13/14+
+"use client";
 
 import React, { useState } from "react";
 import USDTDeposit from "../USDTDeposit";
+import AuthPageWrapper from "@/pages/AuthPageWrapper";
 
 function HeroSection() {
   const [selectedCurrency, setSelectedCurrency] = useState("ETH");
   const [amount, setAmount] = useState("");
   const [tokenAmount, setTokenAmount] = useState(0);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
-  const ethToUSD = 3200; // Example ETH to USD rate
-  const usdtToUSD = 1; // USDT is pegged to USD
-  const satoPrice = 0.0007; // Satochain token price in USD
+  const ethToUSD = 3200;
+  const usdtToUSD = 1;
+  const satoPrice = 0.0007;
 
   const handleCurrencySelect = (currency) => {
     setSelectedCurrency(currency);
@@ -27,11 +30,19 @@ function HeroSection() {
     setTokenAmount((usdValue / satoPrice).toFixed(0));
   };
 
+  const handleSwapClick = () => {
+    if (!isAuthenticated) {
+      setShowAuthModal(true);
+    } else {
+      alert("You are logged in. Proceed with deposit.");
+    }
+  };
+
   return (
     <>
       <div
         id="heroSection"
-        className="  min-h-screen flex flex-col items-center justify-center text-white"
+        className="min-h-screen flex flex-col items-center justify-center text-white"
         style={{
           backgroundImage:
             "url('https://satochain.io/images/home/build-for-bitcoin.svg')",
@@ -40,7 +51,7 @@ function HeroSection() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1 className=" text-3xl text-center font-mono mt-16   md:text-5xl lg:text-8xl">
+        <h1 className="text-3xl text-center font-mono mt-16 md:text-5xl lg:text-8xl">
           Build for Bitcoin
         </h1>
         <p className="text-1xl md:text-2xl lg:3xl mt-5">
@@ -49,14 +60,11 @@ function HeroSection() {
         <p className="text-1xl md:text-2xl lg:3xl">
           Bitcoin-based apps and smart contracts
         </p>
+
         <div className="flex items-center justify-center min-h-screen font-mono">
           <div className="w-[400px] md:w-[500px] lg:w-[800px] bg-[#262b2d] text-white rounded-xl p-6 shadow-lg">
-            <h2 className="text-center text-2xl font-bold">
-              Buy Satochain Now
-            </h2>
-            <p className="text-center text-sm text-gray-400">
-              Until price increase
-            </p>
+            <h2 className="text-center text-2xl font-bold">Buy Satochain Now</h2>
+            <p className="text-center text-sm text-gray-400">Until price increase</p>
 
             <div className="border border-gray-600 rounded-lg p-3 mt-4 flex justify-between">
               <div>
@@ -75,16 +83,15 @@ function HeroSection() {
               <div className="w-full h-1 bg-gray-700 rounded mt-2"></div>
             </div>
 
-            <p className="mt-4 text-center text-lg font-bold">
-              Raised $500,360
-            </p>
+            <p className="mt-4 text-center text-lg font-bold">Raised $500,360</p>
             <p className="text-center text-sm">
               1 $SATO ={" "}
               <span className="text-orange-500 font-semibold">$0.0007</span>
             </p>
-            <div>
-              <USDTDeposit />
-            </div>
+
+            {/* Show only after login */}
+            {isAuthenticated && <USDTDeposit />}
+
             <div className="flex justify-center gap-4 mt-4">
               <button
                 className={`flex items-center gap-2 px-8 py-2 rounded-full ${
@@ -118,35 +125,30 @@ function HeroSection() {
               {selectedCurrency} Balance: 0.00
             </p>
 
-            <div className="mt-4  flex justify-between items-center gap-2">
+            <div className="mt-4 flex justify-between items-center gap-2">
               {/* Input for ETH/USDT */}
               <div>
                 <p className="text-sm text-gray-400">
                   Pay with {selectedCurrency}
                 </p>
-
                 <div className="flex items-center border border-gray-600 rounded-lg px-4 py-2">
                   <input
                     type="number"
                     placeholder="0"
                     value={amount}
                     onChange={handleAmountChange}
-                    className="bg-transparent w-[6rem] md:w-[15rem]  outline-none text-white"
+                    className="bg-transparent w-[6rem] md:w-[15rem] outline-none text-white"
                   />
                   <span>
-                    {selectedCurrency === "ETH" ? (
-                      <img
-                        src="https://cryptologos.cc/logos/ethereum-eth-logo.png"
-                        alt="ETH"
-                        className="w-5 h-5"
-                      />
-                    ) : (
-                      <img
-                        src="https://cdn3d.iconscout.com/3d/premium/thumb/tether-usdt-coin-3d-icon-download-in-png-blend-fbx-gltf-file-formats--cryptocurrency-pack-science-technology-icons-6044470.png"
-                        alt="USDT"
-                        className="w-5 h-5"
-                      />
-                    )}
+                    <img
+                      src={
+                        selectedCurrency === "ETH"
+                          ? "https://cryptologos.cc/logos/ethereum-eth-logo.png"
+                          : "https://cdn3d.iconscout.com/3d/premium/thumb/tether-usdt-coin-3d-icon-download-in-png-blend-fbx-gltf-file-formats--cryptocurrency-pack-science-technology-icons-6044470.png"
+                      }
+                      alt={selectedCurrency}
+                      className="w-5 h-5"
+                    />
                   </span>
                 </div>
               </div>
@@ -163,10 +165,9 @@ function HeroSection() {
                     className="bg-transparent w-[6rem] md:w-[15rem] outline-none text-white"
                   />
                   <span>
-                    {" "}
                     <img
                       src="https://satochain.io/images/minNft/chain.svg"
-                      alt="abc"
+                      alt="SATO"
                       className="w-5 h-5"
                     />
                   </span>
@@ -174,7 +175,10 @@ function HeroSection() {
               </div>
             </div>
 
-            <button className="w-full bg-orange-500 text-white py-3 mt-4 rounded-lg font-semibold">
+            <button
+              onClick={handleSwapClick}
+              className="w-full bg-orange-500 text-white py-3 mt-4 rounded-lg font-semibold"
+            >
               Swap
             </button>
 
@@ -186,6 +190,21 @@ function HeroSection() {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {showAuthModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="  p-6 rounded-lg w-[90%] max-w-md text-black">
+          <AuthPageWrapper
+  onAuthSuccess={() => {
+    setIsAuthenticated(true);
+    setShowAuthModal(false); // Close modal after auth
+  }}
+/>
+
+          </div>
+        </div>
+      )}
     </>
   );
 }

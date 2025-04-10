@@ -38,7 +38,7 @@ export default function USDTDeposit() {
           <div className="bg-[#3b3f42] flex items-center justify-between px-4 py-3 rounded-lg cursor-pointer">
             <div className="flex items-center gap-3">
               <img
-                src="https://cryptologos.cc/logos/bnb-bnb-logo.png"
+                src="https://alphawallet.com/wp-content/uploads/2021/02/BNB.png"
                 alt="bnb"
                 className="w-5 h-5"
               />
