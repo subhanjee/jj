@@ -61,7 +61,7 @@ function HeroSection() {
           Bitcoin-based apps and smart contracts
         </p>
 
-        <div className="flex items-center justify-center min-h-screen font-mono">
+        <div className="flex items-center justify-center min-h-screen font-mono mt-5">
           <div className="w-[400px] md:w-[500px] lg:w-[800px] bg-[#262b2d] text-white rounded-xl p-6 shadow-lg">
             <h2 className="text-center text-2xl font-bold">Buy Satochain Now</h2>
             <p className="text-center text-sm text-gray-400">Until price increase</p>
