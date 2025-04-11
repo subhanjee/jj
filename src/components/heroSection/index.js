@@ -1,15 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import USDTDeposit from "../USDTDeposit";
-import AuthPageWrapper from "@/pages/AuthPageWrapper";
+// import USDTDeposit from "../USDTDeposit";
+// import AuthPageWrapper from "@/pages/AuthPageWrapper";
 
 function HeroSection() {
   const [selectedCurrency, setSelectedCurrency] = useState("ETH");
   const [amount, setAmount] = useState("");
   const [tokenAmount, setTokenAmount] = useState(0);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [showAuthModal, setShowAuthModal] = useState(false);
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // const [showAuthModal, setShowAuthModal] = useState(false);
 
   const ethToUSD = 3200;
   const usdtToUSD = 1;
@@ -32,7 +32,7 @@ function HeroSection() {
 
   const handleSwapClick = () => {
     if (!isAuthenticated) {
-      setShowAuthModal(true);
+      // setShowAuthModal(true);
     } else {
       alert("You are logged in. Proceed with deposit.");
     }
@@ -63,8 +63,12 @@ function HeroSection() {
 
         <div className="flex items-center justify-center min-h-screen font-mono ">
           <div className="w-[400px] md:w-[500px] lg:w-[800px] bg-[#262b2d] text-white rounded-xl p-6 shadow-lg">
-            <h2 className="text-center text-2xl font-bold">Buy Satochain Now</h2>
-            <p className="text-center text-sm text-gray-400">Until price increase</p>
+            <h2 className="text-center text-2xl font-bold">
+              Buy Satochain Now
+            </h2>
+            <p className="text-center text-sm text-gray-400">
+              Until price increase
+            </p>
 
             <div className="border border-gray-600 rounded-lg p-3 mt-4 flex justify-between">
               <div>
@@ -83,14 +87,16 @@ function HeroSection() {
               <div className="w-full h-1 bg-gray-700 rounded mt-2"></div>
             </div>
 
-            <p className="mt-4 text-center text-lg font-bold">Raised $500,360</p>
+            <p className="mt-4 text-center text-lg font-bold">
+              Raised $500,360
+            </p>
             <p className="text-center text-sm">
               1 $SATO ={" "}
               <span className="text-orange-500 font-semibold">$0.0007</span>
             </p>
 
             {/* Show only after login */}
-            {isAuthenticated && <USDTDeposit />}
+            {/* {isAuthenticated && <USDTDeposit />} */}
 
             <div className="flex justify-center gap-4 mt-4">
               <button
@@ -148,7 +154,7 @@ function HeroSection() {
                       }
                       alt={selectedCurrency}
                       className=" w-5 h-5 bg-white rounded-full p-1"
-                      />
+                    />
                   </span>
                 </div>
               </div>
@@ -181,30 +187,23 @@ function HeroSection() {
             >
               Swap
             </button>
-{/* 
-            <p className="text-center mt-3 text-sm text-gray-400">
-              <a href="#" className="underline">
-                Refer a friend
-              </a>
-            </p> */}
           </div>
         </div>
       </div>
 
       {/* Modal */}
-      {showAuthModal && (
+      {/* {showAuthModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="  p-6 rounded-lg w-[90%] max-w-md text-black">
-          <AuthPageWrapper
-  onAuthSuccess={() => {
-    setIsAuthenticated(true);
-    setShowAuthModal(false); // Close modal after auth
-  }}
-/>
-
+            <AuthPageWrapper
+              onAuthSuccess={() => {
+                setIsAuthenticated(true);
+                setShowAuthModal(false); // Close modal after auth
+              }}
+            />
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 }

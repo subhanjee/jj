@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 // import { ChevronDown, Download, Menu, X } from "lucide-react";
 
-export default function Navbar() {
+export default function Navbar({ onJoinClick }) {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
@@ -46,11 +46,11 @@ export default function Navbar() {
       </ul>
 
       {/* CTA Button */}
-      <Link href="AuthPageWrapper">
-      <button className="hidden md:flex bg-orange-500 text-white px-5 py-2 rounded-full flex items-center font-medium hover:bg-orange-500">
+    
+      <button  onClick={onJoinClick} className="hidden md:flex bg-orange-500 text-white px-5 py-2 rounded-full flex items-center font-medium hover:bg-orange-500">
         Join Satochain
       </button>
-      </Link>
+       
 
       {/* Mobile Menu Button */}
       <button
@@ -90,7 +90,10 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button in Mobile */}
-          <button className="bg-orange-500 text-[#0D1E16] px-5 py-2  rounded-full flex justify-center items-center font-medium hover:bg-[#00D996]">
+          <button    onClick={() => {
+              setMobileMenuOpen(false)
+              onJoinClick()
+            }} className="bg-orange-500 text-[#0D1E16] px-5 py-2  rounded-full flex justify-center items-center font-medium hover:bg-[#00D996]">
             Join Satochain
           </button>
         </div>

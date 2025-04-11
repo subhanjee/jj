@@ -14,7 +14,9 @@ export default function USDTDeposit() {
   };
 
   return (
-    <div className=" text-white flex justify-center items-start ">
+    <div className="flex items-center justify-center min-h-screen font-mono ">
+          <div className="w-[400px] md:w-[500px] lg:w-[800px] bg-[#262b2d] text-white rounded-xl p-6 shadow-lg">
+            <h1 className='text-center text-4xl'>My Account</h1>
       <div className="w-full rounded-xl  p-6 space-y-6">
         {/* Tabs */}
         <div className="flex space-x-4">
@@ -125,6 +127,7 @@ export default function USDTDeposit() {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 }
