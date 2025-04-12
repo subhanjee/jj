@@ -9,7 +9,7 @@ const data = [
   },
   {
     email: "ui***bc@gmail.com",
-    auctioned: "167,099.195",
+    auctioned: "167.95",
 
     time: "4 sec ago",
   },
@@ -27,7 +27,7 @@ const data = [
   },
   {
     email: "bi***o@gmail.com",
-    auctioned: "594,830.365",
+    auctioned: "594.65",
 
     time: "20 min ago",
   },
@@ -39,13 +39,13 @@ const data = [
   },
   {
     email: "rt***n@gmail.com",
-    auctioned: "20.000",
+    auctioned: "20,000.00",
 
     time: "50 min ago",
   },
   {
     email: "kl***o@gmail.com",
-    auctioned: "594,830.365",
+    auctioned: "830.36 ",
 
     time: "1 hour ago",
   },
@@ -84,7 +84,7 @@ export default function InvestingTable() {
               <td className="px-4 py-3 border-b border-gray-700">
                 {item.email}
               </td>
-              <td className="px-4 py-3 text-green-400 border-b border-gray-700">
+              <td className="px-4 py-3 text-orange-500 border-b border-gray-700">
                 {item.auctioned}
               </td>
               <td className="px-4 py-3 text-gray-400 border-b border-gray-700">
