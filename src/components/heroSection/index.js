@@ -135,7 +135,7 @@ function HeroSection() {
                     placeholder="0"
                     value={amount}
                     onChange={handleAmountChange}
-                    className="bg-transparent w-[6rem] md:w-[15rem] outline-none text-white"
+                    className="bg-transparent w-[6rem] md:w-[10rem] outline-none text-white"
                   />
                   <span>
                     <img
@@ -160,7 +160,7 @@ function HeroSection() {
                     placeholder="0"
                     value={tokenAmount}
                     readOnly
-                    className="bg-transparent w-[6rem] md:w-[15rem] outline-none text-white"
+                    className="bg-transparent w-[6rem] md:w-[10rem] outline-none text-white"
                   />
                   <span>
                     <img

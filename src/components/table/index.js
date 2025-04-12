@@ -60,7 +60,7 @@ const data = [
 export default function InvestingTable() {
   return (
     <div className="overflow-x-auto p-4 text-white bg-[#262b2d] border border-gray-600 rounded-2xl shadow-2xl ">
-      <h1 className="font-mono text-2xl text-center font-bold">Recent Transactions</h1>
+      <h1 className="font-mono text-2xl md:text-4xl text-center font-bold mb-2">Recent Transactions</h1>
       <table className="min-w-[20rem] md:min-w-[20rem] lg:min-w-[20rem] xl:min-w-[40rem]   ">
         <thead className="  text-sm">
           <tr>
