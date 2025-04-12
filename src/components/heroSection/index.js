@@ -43,26 +43,18 @@ function HeroSection() {
       <div
         id="heroSection"
         className="min-h-screen flex flex-col items-center justify-center text-white"
-        style={{
-          backgroundImage:
-            "url('https://satochain.io/images/home/build-for-bitcoin.svg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
+        // style={{
+        //   backgroundImage:
+        //     "url('https://satochain.io/images/home/build-for-bitcoin.svg')",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   backgroundRepeat: "no-repeat",
+        // }}
       >
-        <h1 className="text-3xl text-center font-mono mt-16 md:text-5xl lg:text-8xl">
-          Build for Bitcoin
-        </h1>
-        <p className="text-1xl md:text-2xl lg:3xl mt-5">
-          Enhance Bitcoins economy using secure
-        </p>
-        <p className="text-1xl md:text-2xl lg:3xl">
-          Bitcoin-based apps and smart contracts
-        </p>
+      
 
         <div className="flex items-center justify-center min-h-screen font-mono ">
-          <div className="w-[400px] md:w-[500px] lg:w-[800px] bg-[#262b2d] text-white rounded-xl p-6 shadow-lg">
+          <div className="w-[400px] md:w-[500px] lg:w-[500px] xl:w-[600px] bg-[#262b2d] text-white rounded-xl p-6 shadow-lg">
             <h2 className="text-center text-2xl font-bold">
               Buy Satochain Now
             </h2>
@@ -77,7 +69,7 @@ function HeroSection() {
               </div>
               <div>
                 <p className="text-xs text-gray-400">Listing Price</p>
-                <p className="font-semibold">$0.0001</p>
+                <p className="font-semibold">$0.100</p>
               </div>
             </div>
 
@@ -182,7 +174,7 @@ function HeroSection() {
             </div>
 
             <button
-              onClick={handleSwapClick}
+              // onClick={handleSwapClick}
               className="w-full bg-orange-500 text-white py-3 mt-4 rounded-lg font-semibold"
             >
               Swap

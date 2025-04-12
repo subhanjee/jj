@@ -16,13 +16,32 @@ function LandingPage() {
   return (
     <div>
       <Header onJoinClick={() => setShowAuthModal(true)} />
-      {!isAuthenticated ? (
-        <>
-          <HeroSection />
-        </>
-      ) : (
-        <USDTDeposit />
-      )}
+        <div className='flex flex-col items-center justify-center min-h-screen text-white'
+          style={{
+            backgroundImage:
+              "url('https://satochain.io/images/home/build-for-bitcoin.svg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}>
+        <h1 className="text-3xl text-center font-mono mt-16 md:text-5xl lg:text-8xl">
+          Build for Bitcoin
+        </h1>
+        <p className="text-1xl md:text-2xl lg:3xl mt-5">
+          Enhance Bitcoins economy using secure
+        </p>
+        <p className="text-1xl md:text-2xl lg:3xl">
+          Bitcoin-based apps and smart contracts
+        </p>
+      <div
+  className='min-h-screen grid grid-cols-1  gap-5 md:grid-cols-1 lg:grid-cols-2 text-white'
+
+>
+  
+  <HeroSection />
+  {isAuthenticated && <USDTDeposit />}
+</div>
+</div>
       <FeaturesSection />
       <Unlocking />
       <Roadmap />
