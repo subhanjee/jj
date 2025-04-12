@@ -37,11 +37,9 @@ function LandingPage() {
           Bitcoin-based apps and smart contracts
         </p>
         <div className="min-h-screen w-full flex flex-col lg:flex-row items-center justify-center gap-8 px-12 py-12 text-white">
-  <HeroSection />
-  {!isAuthenticated ? <InvestingTable /> : <USDTDeposit />}
-</div>
-
-
+          <HeroSection />
+          {!isAuthenticated ? <InvestingTable /> : <USDTDeposit />}
+        </div>
       </div>
       <FeaturesSection />
       <Unlocking />
