@@ -24,18 +24,22 @@ export default function Footer() {
         </div>
 
         {/* Right Section - Icons */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mt-2">
           <a
-            href="#"
+            href="https://discord.com/invite/H8VCYKgunu"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gradient-to-br from-orange-600 to-yellow-400 p-3 rounded-lg shadow-md"
           >
-            {/* <SiX className="text-white text-xl" /> */}
+            <img src="https://satochain.io/images/icon/discord.svg" alt="Discord" className="w-7 h-5" />
           </a>
           <a
-            href="#"
+            href="https://twitter.com/SatochainL2"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gradient-to-br from-orange-600 to-yellow-400 p-3 rounded-lg shadow-md"
           >
-            {/* <DiscordLogoIcon className="text-white w-5 h-5" /> */}
+            <img src="https://satochain.io/images/icon/twitter.svg" alt="Discord" className="w-7 h-5" />
           </a>
         </div>
       </div>
