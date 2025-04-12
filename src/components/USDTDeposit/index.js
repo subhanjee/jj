@@ -23,7 +23,7 @@ export default function USDTDeposit() {
           <button
             key={key}
             onClick={() => setActiveTab(key)}
-            className={`px-4 py-2 rounded-full font-semibold transition ${
+            className={`px-4 py-2 rounded-full font-semibold transition text-[.7rem] md:text-[1rem] ${
               activeTab === key
                 ? 'bg-orange-500 text-white'
                 : 'bg-[#3b3f42] hover:bg-[#505458]'
@@ -38,7 +38,7 @@ export default function USDTDeposit() {
 
   return (
     <div className="flex items-center justify-center min-h-screen font-mono">
-      <div className="w-[400px] md:w-[600px] lg:w-[500px] xl:w-[600px] bg-[#262b2d] text-white rounded-xl p-6 shadow-lg">
+      <div className="w-[370px] md:w-[600px] lg:w-[500px] xl:w-[600px] bg-[#262b2d] text-white rounded-xl p-6 shadow-lg">
         <h1 className="text-center text-4xl mb-6">My Account</h1>
         <div className="w-full rounded-xl p-6 space-y-6">
           {/* Tabs */}

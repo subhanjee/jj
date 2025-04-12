@@ -61,8 +61,8 @@ export default function InvestingTable() {
   return (
     <div className="overflow-x-auto p-4 text-white bg-[#262b2d] border border-gray-600 rounded-2xl shadow-2xl ">
       <h1 className="font-mono text-2xl md:text-4xl text-center font-bold mb-2">Recent Transactions</h1>
-      <table className="min-w-[20rem] md:min-w-[20rem] lg:min-w-[20rem] xl:min-w-[40rem]   ">
-        <thead className="  text-sm">
+      <table className="w-[10rem] md:w-[20rem] lg:w-[20rem] xl:w-[40rem]   ">
+        <thead className="  text-[.7rem] md:text-[1rem]">
           <tr>
             <th className="px-4 py-3 text-left border-b border-gray-600">#</th>
             <th className="px-4 py-3 text-left border-b border-gray-600">
@@ -76,7 +76,7 @@ export default function InvestingTable() {
             </th>
           </tr>
         </thead>
-        <tbody className="text-sm">
+        <tbody  className="  text-[.7rem] md:text-[1rem]">
           {data.map((item, idx) => (
             <tr key={idx} className="hover:bg-gray-700 transition duration-150">
               <td className="px-4 py-3 border-b border-gray-700 text-gray-400">
