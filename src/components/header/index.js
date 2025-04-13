@@ -22,11 +22,24 @@ export default function Navbar({ onJoinClick }) {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex items-center space-x-6 text-white font-medium">
-      <a href="#heroSection" className="text-orange-500 cursor-pointer">$Presale</a>
-        <a href="#featuresSection" className="hover:text-orange-500 cursor-pointer">Feature</a>
-        <a href="#tokenomics" className="hover:text-orange-500 cursor-pointer">Tokenomics</a>
-        <a href="#roadmap" className="hover:text-orange-500 cursor-pointer">Roadmap</a>
-        <a href="#faqs" className="hover:text-orange-500 cursor-pointer">FAQs</a>
+        <a href="#heroSection" className="text-orange-500 cursor-pointer">
+          $Presale
+        </a>
+        <a
+          href="#featuresSection"
+          className="hover:text-orange-500 cursor-pointer"
+        >
+          Feature
+        </a>
+        <a href="#tokenomics" className="hover:text-orange-500 cursor-pointer">
+          Tokenomics
+        </a>
+        <a href="#roadmap" className="hover:text-orange-500 cursor-pointer">
+          Roadmap
+        </a>
+        <a href="#faqs" className="hover:text-orange-500 cursor-pointer">
+          FAQs
+        </a>
         <a className="hover:text-orange-500 cursor-pointer">Bridge</a>
 
         {/* Dropdown */}
@@ -46,28 +59,38 @@ export default function Navbar({ onJoinClick }) {
       </ul>
 
       {/* CTA Button */}
-    
-      <button  onClick={onJoinClick} className="hidden md:flex bg-orange-500 text-white px-5 py-2 rounded-full flex items-center font-medium hover:bg-orange-500">
+
+      <button
+        onClick={onJoinClick}
+        className="hidden md:flex bg-orange-500 text-white px-5 py-2 rounded-full flex items-center font-medium hover:bg-orange-500"
+      >
         Join Satochain
       </button>
-       
 
       {/* Mobile Menu Button */}
       <button
         className="md:hidden text-white"
         onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
       >
-        {isMobileMenuOpen ? "X" : <img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" alt="abc" className="w-10 h-10 bg-orange-500 p-2 rounded-md" />}
+        {isMobileMenuOpen ? (
+          "X"
+        ) : (
+          <img
+            src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png"
+            alt="abc"
+            className="w-10 h-10 bg-orange-500 p-2 rounded-md"
+          />
+        )}
       </button>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-black p-6   flex flex-col space-y-4 text-white border-t border-[#1A3A2A] md:hidden">
-              <a className="text-orange-500 cursor-pointer">$Presale</a>
-        <a className="hover:text-orange-500 cursor-pointer">Feature</a>
-        <a className="hover:text-orange-500 cursor-pointer">TOKENOMICS</a>
-        <a className="hover:text-orange-500 cursor-pointer">ROADMAP</a>
-        <a className="hover:text-orange-500 cursor-pointer">FAQ</a>
+          <a className="text-orange-500 cursor-pointer">$Presale</a>
+          <a className="hover:text-orange-500 cursor-pointer">Feature</a>
+          <a className="hover:text-orange-500 cursor-pointer">TOKENOMICS</a>
+          <a className="hover:text-orange-500 cursor-pointer">ROADMAP</a>
+          <a className="hover:text-orange-500 cursor-pointer">FAQ</a>
 
           {/* Dropdown for Mobile */}
           <div className="relative">
@@ -90,10 +113,13 @@ export default function Navbar({ onJoinClick }) {
           </div>
 
           {/* CTA Button in Mobile */}
-          <button    onClick={() => {
-              setMobileMenuOpen(false)
-              onJoinClick()
-            }} className="bg-orange-500 text-white px-5 py-2  rounded-full flex justify-center items-center font-medium hover:bg-[#00D996]">
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              onJoinClick();
+            }}
+            className="bg-orange-500 text-white px-5 py-2  rounded-full flex justify-center items-center font-medium hover:bg-[#00D996]"
+          >
             Join Satochain
           </button>
         </div>

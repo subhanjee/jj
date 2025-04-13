@@ -69,7 +69,7 @@ const WithdrawUSDT = () => {
       >
         Confirm
       </button>
-      <div className="grid grid-cols-5 gap-2 text-sm text-gray-400 border-b border-gray-700 pb-2">
+      <div className="grid grid-cols-5 gap-2 text-[.7rem] md:text-[1rem] text-gray-400 border-b border-gray-700 pb-2">
                   <span>#</span>
                   <span>USDT Deposited</span>
                   <span>Transaction Hash</span>
