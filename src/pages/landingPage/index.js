@@ -40,6 +40,7 @@ function LandingPage() {
           <HeroSection />
           {!isAuthenticated ? <InvestingTable /> : <USDTDeposit />}
         </div>
+        
       </div>
       <FeaturesSection />
       <Unlocking />
