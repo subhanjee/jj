@@ -109,13 +109,40 @@ export default function AuthPage({ onAuthSuccess }) {
             />
           )}
 
-          <button
-            type="submit"
-            className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-200 transition disabled:opacity-50"
-            disabled={loading}
-          >
-            {loading ? "Please wait..." : isLogin ? "Login" : "Register"}
-          </button>
+<button
+  type="submit"
+  disabled={loading}
+  className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-200 transition disabled:opacity-50"
+>
+  {loading ? (
+    <span className="flex items-center justify-center gap-2">
+      <svg
+        className="animate-spin h-5 w-5 text-white"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          className="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          strokeWidth="4"
+        ></circle>
+        <path
+          className="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8v8H4z"
+        ></path>
+      </svg>
+      Please wait...
+    </span>
+  ) : isLogin ? (
+    "Login"
+  ) : (
+    "Register"
+  )}
+</button>
+
         </form>
 
         <p className="text-center mt-4 text-white">
