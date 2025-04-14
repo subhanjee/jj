@@ -73,7 +73,7 @@ function HeroSectionTwo() {
               <div className="w-full h-1 bg-gray-700 rounded mt-2"></div>
             </div>
 
-            <p className="mt-4 text-center text-lg font-bold">
+            <p className="mt-4 text-center text-lg md:text-2xl font-bold">
               Raised $500,360
             </p>
             <p className="text-center text-sm">
