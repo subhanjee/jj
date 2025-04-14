@@ -3,7 +3,7 @@ import React from "react";
 const data = [
   {
     email: "ai***1@gmail.com",
-    auctioned: "20.350",
+    auctioned: "20.35",
 
     time: "2 sec ago",
   },
@@ -15,13 +15,13 @@ const data = [
   },
   {
     email: "rp***n@gmail.com",
-    auctioned: "158.761",
+    auctioned: "158.76",
 
     time: "5 min ago",
   },
   {
     email: "dq***4@gmail.com",
-    auctioned: "54.995",
+    auctioned: "54.99",
 
     time: "10 min ago",
   },
@@ -33,13 +33,13 @@ const data = [
   },
   {
     email: "mu***1@gmail.com",
-    auctioned: "20.000",
+    auctioned: "20.00",
 
     time: "30 min ago",
   },
   {
     email: "rt***n@gmail.com",
-    auctioned: "20,000.00",
+    auctioned: "20,000",
 
     time: "50 min ago",
   },
@@ -51,7 +51,7 @@ const data = [
   },
   {
     email: "qw***e@outlook.com",
-    auctioned: "81.264",
+    auctioned: "81.26",
 
     time: "2 hour ago",
   },
