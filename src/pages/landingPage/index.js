@@ -9,6 +9,7 @@ import Unlocking from "@/src/components/unlocking";
 import USDTDeposit from "@/src/components/USDTDeposit";
 import AuthPageWrapper from "@/pages/AuthPageWrapper";
 import InvestingTable from "@/src/components/table";
+import HeroSectionTwo from "@/src/components/heroSectiontwo";
 
 function LandingPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -37,9 +38,18 @@ function LandingPage() {
           Bitcoin-based apps and smart contracts
         </p>
         <div className="min-h-screen w-full flex flex-col lg:flex-row items-center justify-center gap-8 px-12 py-12 text-white">
-          <HeroSection />
-          {!isAuthenticated ? <InvestingTable /> : <USDTDeposit />}
-        </div>
+    {!isAuthenticated ? (
+      <>
+        <HeroSection />
+        <InvestingTable />
+      </>
+    ) : (
+      <>
+        <HeroSectionTwo />
+        <USDTDeposit />
+      </>
+    )}
+  </div>
         
       </div>
       <FeaturesSection />
