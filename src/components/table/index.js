@@ -85,7 +85,7 @@ export default function InvestingTable() {
               <td className="px-4 py-3 border-b border-gray-700">
                 {item.email}
               </td>
-              <td className="px-4 py-3 text-orange-500 border-b border-gray-700">
+              <td className="px-4 py-3 text-green-500 border-b border-gray-700">
                 {item.auctioned}
               </td>
               <td className="px-4 py-3 text-gray-400 border-b border-gray-700">
