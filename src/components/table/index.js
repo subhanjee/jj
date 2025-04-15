@@ -39,7 +39,7 @@ const data = [
   },
   {
     email: "rv***n@gmail.com",
-    auctioned: "60,500",
+    auctioned: "60,500.00",
 
     time: "50 min ago",
   },
