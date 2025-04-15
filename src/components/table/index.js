@@ -2,56 +2,56 @@
 import React from "react";
 const data = [
   {
-    email: "ai***1@gmail.com",
-    auctioned: "20.35",
+    email: "ao***1@gmail.com",
+    auctioned: "200.39",
 
     time: "2 sec ago",
   },
   {
-    email: "ui***bc@gmail.com",
-    auctioned: "167.95",
+    email: "uv***bc@gmail.com",
+    auctioned: "17.67",
 
     time: "4 sec ago",
   },
   {
-    email: "rp***n@gmail.com",
-    auctioned: "158.76",
+    email: "rr***n@gmail.com",
+    auctioned: "128.26",
 
     time: "5 min ago",
   },
   {
-    email: "dq***4@gmail.com",
-    auctioned: "54.99",
+    email: "dw***4@gmail.com",
+    auctioned: "24.49",
 
     time: "10 min ago",
   },
   {
-    email: "bi***o@gmail.com",
-    auctioned: "594.65",
+    email: "fg***o@gmail.com",
+    auctioned: "894.15",
 
     time: "20 min ago",
   },
   {
-    email: "mu***1@gmail.com",
-    auctioned: "20.00",
+    email: "mt***1@gmail.com",
+    auctioned: "80.30",
 
     time: "30 min ago",
   },
   {
-    email: "rt***n@gmail.com",
-    auctioned: "20,000",
+    email: "rv***n@gmail.com",
+    auctioned: "60,500",
 
     time: "50 min ago",
   },
   {
-    email: "kl***o@gmail.com",
-    auctioned: "830.36 ",
+    email: "ku***o@gmail.com",
+    auctioned: "330.16",
 
     time: "1 hour ago",
   },
   {
-    email: "qw***e@outlook.com",
-    auctioned: "81.26",
+    email: "er***e@outlook.com",
+    auctioned: "91.26",
 
     time: "2 hour ago",
   },
