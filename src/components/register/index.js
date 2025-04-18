@@ -1,12 +1,13 @@
 "use client";
 
 import { loginCoinUser, register } from "@/src/helper";
-import { useState } from "react";
-import toast from "react-hot-toast"; // optional, for alerts
+import { useState, useCallback } from "react";
+import toast from "react-hot-toast";
 
 export default function AuthPage({ onAuthSuccess }) {
   const [isLogin, setIsLogin] = useState(true);
-  const [loading, setLoading] = useState(false); // <-- loading state
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -15,16 +16,17 @@ export default function AuthPage({ onAuthSuccess }) {
     role: "user",
   });
 
-  const handleChange = (e) => {
+  const handleChange = useCallback((e) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
-  };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // start loading
+    setLoading(true);
+    const toastId = toast.loading(isLogin ? "Logging in..." : "Registering...");
 
     try {
       if (isLogin) {
@@ -34,8 +36,8 @@ export default function AuthPage({ onAuthSuccess }) {
         });
 
         if (res.status === 200) {
-          toast.success("Login successful");
-          onAuthSuccess(); // trigger authenticated state
+          toast.success("Login successful", { id: toastId });
+          onAuthSuccess();
         }
       } else {
         const res = await register.post("/", {
@@ -47,15 +49,16 @@ export default function AuthPage({ onAuthSuccess }) {
         });
 
         if (res.status === 201) {
-          toast.success("Registered successfully");
-          onAuthSuccess(); // trigger authenticated state
+          toast.success("Registered successfully", { id: toastId });
+          onAuthSuccess();
         }
       }
     } catch (err) {
-      console.error(err);
-      toast.error(err?.response?.data?.message || "Something went wrong");
+      toast.error(err?.response?.data?.message || "Something went wrong", {
+        id: toastId,
+      });
     } finally {
-      setLoading(false); // stop loading
+      setLoading(false);
     }
   };
 
@@ -109,46 +112,45 @@ export default function AuthPage({ onAuthSuccess }) {
             />
           )}
 
-<button
-  type="submit"
-  disabled={loading}
-  className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-200 transition disabled:opacity-50"
->
-  {loading ? (
-    <span className="flex items-center justify-center gap-2">
-      <svg
-        className="animate-spin h-5 w-5 text-white"
-        viewBox="0 0 24 24"
-      >
-        <circle
-          className="opacity-25"
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          strokeWidth="4"
-        ></circle>
-        <path
-          className="opacity-75"
-          fill="currentColor"
-          d="M4 12a8 8 0 018-8v8H4z"
-        ></path>
-      </svg>
-      Please wait...
-    </span>
-  ) : isLogin ? (
-    "Login"
-  ) : (
-    "Register"
-  )}
-</button>
-
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-200 transition disabled:opacity-50"
+          >
+            {loading ? (
+              <span className="flex items-center justify-center gap-2">
+                <svg
+                  className="animate-spin h-5 w-5 text-white"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v8H4z"
+                  ></path>
+                </svg>
+                Please wait...
+              </span>
+            ) : isLogin ? (
+              "Login"
+            ) : (
+              "Register"
+            )}
+          </button>
         </form>
 
         <p className="text-center mt-4 text-white">
           {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
           <button
-            onClick={() => !loading && setIsLogin(!isLogin)} // prevent toggle while loading
+            onClick={() => !loading && setIsLogin(!isLogin)}
             className="text-orange-500 hover:underline"
             disabled={loading}
           >
