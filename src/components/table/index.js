@@ -3,25 +3,25 @@ import React from "react";
 const data = [
   {
     email: "ao***1@gmail.com",
-    auctioned: "200.39",
+    auctioned: "2000.39",
 
     time: "2 sec ago",
   },
   {
     email: "uv***bc@gmail.com",
-    auctioned: "17.67",
+    auctioned: "230.67",
 
     time: "4 sec ago",
   },
   {
     email: "rr***n@gmail.com",
-    auctioned: "128.26",
+    auctioned: "906.26",
 
     time: "5 min ago",
   },
   {
     email: "dw***4@gmail.com",
-    auctioned: "24.49",
+    auctioned: "5000.49",
 
     time: "10 min ago",
   },
