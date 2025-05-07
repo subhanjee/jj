@@ -66,7 +66,7 @@ function HeroSection() {
 
             <div className="mt-4">
               <p className="text-sm text-gray-400">Current Price:</p>
-              <p className="text-lg font-semibold">$0.0007</p>
+              <p className="text-lg font-semibold">$0.002</p>
               <div className="w-full h-1 bg-gray-700 rounded mt-2"></div>
             </div>
 
