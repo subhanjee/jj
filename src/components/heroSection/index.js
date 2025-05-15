@@ -56,7 +56,7 @@ function HeroSection() {
             <div className="border border-gray-600 rounded-lg p-3 mt-4 flex justify-between">
               <div>
                 <p className="text-xs text-gray-400">Listing Date</p>
-                <p className="font-semibold">May 15, 2025</p>
+                <p className="font-semibold">April 10, 2025</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400">Listing Price</p>
@@ -71,7 +71,7 @@ function HeroSection() {
             </div>
 
             <p className="mt-4 text-center text-lg md:text-2xl font-bold">
-              Raised $500,360
+              Raised $387,972
             </p>
             <p className="text-center text-sm">
               1 $SATO ={" "}
