@@ -8,8 +8,6 @@ function HeroSection() {
   const [selectedCurrency, setSelectedCurrency] = useState("ETH");
   const [amount, setAmount] = useState("");
   const [tokenAmount, setTokenAmount] = useState(0);
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
-  // const [showAuthModal, setShowAuthModal] = useState(false);
 
   const ethToUSD = 3200;
   const usdtToUSD = 1;
