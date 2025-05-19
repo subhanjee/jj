@@ -73,7 +73,7 @@ function HeroSection() {
             </p>
             <p className="text-center text-sm">
               1 $SATO ={" "}
-              <span className="text-orange-500 font-semibold">$0.0007</span>
+              <span className="text-orange-500 font-semibold">$0.0009</span>
             </p>        
           </div>
         </div>
