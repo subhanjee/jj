@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div
     // className="bg-[#262b2d] "
-      className={`bg-[#040404] min-h-screen * ${geistSans.variable} ${geistMono.variable} font-sans`}
+      className={`bg-[#02131a] min-h-screen * ${geistSans.variable} ${geistMono.variable} font-sans`}
     >
     <LandingPage/>
    

@@ -9,39 +9,36 @@ export default function Navbar({ onJoinClick }) {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-black py-3 px-6   flex items-center justify-between shadow-lg shadow-white">
+    <nav className="bg-[#02131a] py-5 px-6   flex items-center justify-between ">
       {/* Left - Logo */}
       <div className="flex items-center space-x-2 ">
         <img
-          src="https://satochain.io/images/logo.svg"
+          src="https://www.naxy.ai/assets/Logo-CO9HK8uL.svg"
           alt="Athene"
-          className="h-10 w-10"
+          className="h-15 w-15"
         />
-        <span className="text-white font-semibold text-xl">Satochain</span>
       </div>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex items-center space-x-6 text-white font-medium">
-        <a href="#heroSection" className="text-orange-500 cursor-pointer">
-          $Presale
+        <a href="#heroSection" className="text-[#7ce8eb] cursor-pointer">
+          Home
         </a>
         <a
           href="#featuresSection"
-          className="hover:text-orange-500 cursor-pointer"
+          className="hover:text-[#7ce8eb] cursor-pointer"
         >
-          Feature
+          About Us
         </a>
-        <a href="#tokenomics" className="hover:text-orange-500 cursor-pointer">
-          Tokenomics
+        <a href="#tokenomics" className="hover:text-[#7ce8eb] cursor-pointer">
+          Services
         </a>
-        <a href="#roadmap" className="hover:text-orange-500 cursor-pointer">
-          Roadmap
+        <a href="#roadmap" className="hover:text-[#7ce8eb] cursor-pointer">
+          Contact Us
         </a>
-        <a href="#faqs" className="hover:text-orange-500 cursor-pointer">
-          FAQs
+        <a href="#faqs" className="hover:text-[#7ce8eb] cursor-pointer">
+          Dashboard
         </a>
-        <a className="hover:text-orange-500 cursor-pointer">Bridge</a>
-
         {/* Dropdown */}
         <li
           className="relative cursor-pointer flex items-center"
@@ -62,9 +59,9 @@ export default function Navbar({ onJoinClick }) {
 
       <button
         onClick={onJoinClick}
-        className="hidden md:flex bg-orange-500 text-white px-5 py-2 rounded-full flex items-center font-medium hover:bg-orange-500"
+        className="hidden md:flex bg-[#7ce8eb] text-black px-10 py-3 rounded-full flex items-center font-medium hover:bg-[#b6e5e7]"
       >
-        Join Satochain
+        Join NAXY
       </button>
 
       {/* Mobile Menu Button */}
@@ -78,24 +75,37 @@ export default function Navbar({ onJoinClick }) {
           <img
             src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png"
             alt="abc"
-            className="w-10 h-10 bg-orange-500 p-2 rounded-md"
+            className="w-10 h-10 bg-[#7ce8eb] p-2 rounded-md"
           />
         )}
       </button>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-black p-6   flex flex-col space-y-4 text-white border-t border-[#1A3A2A] md:hidden">
-          <a className="text-orange-500 cursor-pointer">$Presale</a>
-          <a className="hover:text-orange-500 cursor-pointer">Feature</a>
-          <a className="hover:text-orange-500 cursor-pointer">TOKENOMICS</a>
-          <a className="hover:text-orange-500 cursor-pointer">ROADMAP</a>
-          <a className="hover:text-orange-500 cursor-pointer">FAQ</a>
+        <div className="absolute top-24 left-0 w-full bg-[#02131a] p-6   flex flex-col space-y-4 text-white border-t border-[#1A3A2A] md:hidden">
+             <a href="#heroSection" className="text-[#7ce8eb] cursor-pointer">
+          Home
+        </a>
+        <a
+          href="#featuresSection"
+          className="hover:text-[#7ce8eb] cursor-pointer"
+        >
+          About Us
+        </a>
+        <a href="#tokenomics" className="hover:text-[#7ce8eb] cursor-pointer">
+          Services
+        </a>
+        <a href="#roadmap" className="hover:text-[#7ce8eb] cursor-pointer">
+          Contact Us
+        </a>
+        <a href="#faqs" className="hover:text-[#7ce8eb] cursor-pointer">
+          Dashboard
+        </a>
 
           {/* Dropdown for Mobile */}
           <div className="relative">
             <button
-              className="flex items-center hover:text-orange-500 w-full"
+              className="flex items-center hover:text-[#7ce8eb] w-full"
               onClick={() => setDropdownOpen(!isDropdownOpen)}
             >
               {/* More <ChevronDown className="ml-1 h-4 w-4" /> */}
@@ -118,9 +128,9 @@ export default function Navbar({ onJoinClick }) {
               setMobileMenuOpen(false);
               onJoinClick();
             }}
-            className="bg-orange-500 text-white px-5 py-2  rounded-full flex justify-center items-center font-medium hover:bg-[#00D996]"
+            className="bg-[#7ce8eb] text-black px-5 py-2  rounded-full flex justify-center items-center font-medium hover:bg-[#b6e5e7]"
           >
-            Join Satochain
+            Join NAXY
           </button>
         </div>
       )}

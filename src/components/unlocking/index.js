@@ -1,69 +1,53 @@
-import React from "react";
+"use client";
 
-export default function Unlocking() {
+import { Copy } from "lucide-react";
+
+export default function TokenContract() {
+  const contractAddress = "0x864817e3071a1da8d2c6917ee1301e5a92e6b373";
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(contractAddress);
+    alert("Copied to clipboard!");
+  };
+
   return (
-    <div className="min-h-screen   text-white flex-col flex items-center justify-center p-10">
-      <div className="grid md:grid-cols-2 gap-20 items-center max-w-6xl">
-        {/* Left Content */}
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold font-mono">
-            <span className="text-orange-500">sBTC:</span> Unlocking <br />
-            Bitcoin by Satochain
-          </h1>
-          <ul className="mt-6 space-y-2 text-lg font-mono">
-            <li className="flex items-center space-x-2 ">
-              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-              <span>Trust-minimized</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-              <span>Decentralized</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-              <span>Censorship resistant</span>
-            </li>
-          </ul>
+    <div className=" py-16 px-6 text-white min-h-screen\ flex flex-col items-center">
+      <h2 className="text-5xl font-bold mb-4">Token Contract</h2>
+      <p className="text-gray-300 text-lg mb-12 text-center max-w-xl">
+        Use the contract information below to add the Naxy token to your wallet.
+      </p>
+
+      <div className="flex flex-wrap gap-6 justify-center max-w-7xl">
+        <div className="border border-[#7ce8ec] rounded-xl p-6  min-w-[300px] relative overflow-hidden">
+          <h3 className="text-xl font-semibold mb-2">Contract Address</h3>
+          <div className="flex items-center gap-2">
+            <p className="text-gray-300 break-all">{contractAddress}</p>
+            <button onClick={copyToClipboard}>
+              <Copy size={18} className="text-gray-400 hover:text-white" />
+            </button>
+          </div>
         </div>
 
-        {/* Right Image */}
-        <div className="flex justify-center">
-          <img
-            src="https://satochain.io/images/home/sbtc.png" // Replace with actual path
-            alt="Blockchain Illustration"
-            className="rounded-lg"
-          />
-        </div>
-      </div>
-      <div className="grid md:grid-cols-2 gap-20 items-center max-w-6xl pt-16">
-        <div className="flex justify-center">
-          <img
-            src="https://satochain.io/images/home/earn-btc.png" // Replace with actual path
-            alt="Blockchain Illustration"
-            className="rounded-lg"
-          />
-        </div>
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold">
-            <span className="text-orange-500"> Earn BTC </span> <br />
-            by participating as validators
-          </h1>
-          <p className="font-mono text-lg mt-6">
-            Hold and temporarily secure BTC, Satochains native currency, to
-            bolster the networks security and consensus. Over 2000 $BTC have
-            been allocated as consensus rewards
-          </p>
+        <div className="border border-[#7ce8ec] rounded-xl p-6  min-w-[200px]">
+          <h3 className="text-xl font-semibold mb-2">Token Name</h3>
+          <p className="text-gray-300">Naxy</p>
         </div>
 
-        {/* Right Image */}
+        <div className="border border-[#7ce8ec] rounded-xl p-6 min-w-[200px]">
+          <h3 className="text-xl font-semibold mb-2">Blockchain</h3>
+          <p className="text-gray-300">Binance Smart Chain</p>
+        </div>
+
+        <div className="border border-[#7ce8ec] rounded-xl p-6  min-w-[200px]">
+          <h3 className="text-xl font-semibold mb-2">Decimal</h3>
+          <p className="text-gray-300">18</p>
+        </div>
+
+        <div className="border border-[#7ce8ec] rounded-xl p-6  min-w-[200px]">
+          <h3 className="text-xl font-semibold mb-2">Token Symbol</h3>
+          <p className="text-gray-300">NAXY</p>
+        </div>
       </div>
-      <div className="mt-16">
-        <img src="https://satochain.io/images/home/built.png" alt="Blockchain Illustration"   />
-      </div>
-      <h2 className="text-4xl md:text-6xl font-mono  mt-16">
-         
-      Build powerful apps,<br/> secured by Bitcoin
-      </h2>
     </div>
   );
 }

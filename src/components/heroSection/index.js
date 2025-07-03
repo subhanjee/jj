@@ -28,13 +28,6 @@ function HeroSection() {
     setTokenAmount((usdValue / satoPrice).toFixed(0));
   };
 
-  const handleSwapClick = () => {
-    if (!isAuthenticated) {
-      // setShowAuthModal(true);
-    } else {
-      alert("You are logged in. Proceed with deposit.");
-    }
-  };
 
   return (
     <>

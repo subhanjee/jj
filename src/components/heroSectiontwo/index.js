@@ -45,7 +45,6 @@ function HeroSectionTwo() {
         className="min-h-screen flex flex-col items-center justify-center text-white"
       
       >
-      
 
         <div className="flex items-center justify-center min-h-screen font-mono ">
           <div className="w-[350px] md:w-[500px] lg:w-[500px] xl:w-[600px] bg-[#262b2d] text-white rounded-xl p-6 shadow-lg">

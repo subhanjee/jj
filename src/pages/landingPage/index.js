@@ -10,6 +10,11 @@ import USDTDeposit from "@/src/components/USDTDeposit";
 import AuthPageWrapper from "@/pages/AuthPageWrapper";
 import InvestingTable from "@/src/components/table";
 import HeroSectionTwo from "@/src/components/heroSectiontwo";
+import Home from "@/src/components/home";
+import NaxyPresale from "@/src/components/preSale";
+import AboutNaxy from "@/src/components/aboutUs";
+import HowItWorks from "@/src/components/howWork";
+import FeatureComparison from "@/src/components/compareFeatures";
 
 function LandingPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -18,42 +23,29 @@ function LandingPage() {
   return (
     <div>
       <Header onJoinClick={() => setShowAuthModal(true)} />
-      <div
-        className="flex flex-col items-center justify-center min-h-screen text-white"
-        style={{
-          backgroundImage:
-            "url('https://satochain.io/images/home/build-for-bitcoin.svg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <h1 className="text-3xl text-center font-mono mt-16 md:text-5xl lg:text-8xl">
-          Build for Bitcoin
-        </h1>
-        <p className="text-1xl md:text-2xl lg:3xl mt-5">
-          Enhance Bitcoins economy using secure
-        </p>
-        <p className="text-1xl md:text-2xl lg:3xl">
-          Bitcoin-based apps and smart contracts
-        </p>
+      <div className="flex flex-col items-center justify-center text-white">
+        <Home />
+
         <div className="min-h-screen w-full flex flex-col lg:flex-row items-center justify-center gap-8 px-12 py-12 text-white">
-    {!isAuthenticated ? (
-      <>
-        <HeroSection />
-        <InvestingTable />
-      </>
-    ) : (
-      <>
-        <HeroSectionTwo />
-        <USDTDeposit />
-      </>
-    )}
-  </div>
-        
+          {!isAuthenticated ? (
+            <>
+              <HeroSection />
+              <InvestingTable />
+            </>
+          ) : (
+            <>
+              <HeroSectionTwo />
+              <USDTDeposit />
+            </>
+          )}
+        </div>
       </div>
+      <NaxyPresale />
+      <AboutNaxy />
       <FeaturesSection />
+      <HowItWorks />
       <Unlocking />
+      <FeatureComparison/>
       <Roadmap />
       <Faqs />
       <Footer />
