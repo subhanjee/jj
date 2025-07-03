@@ -13,7 +13,7 @@ export default function Navbar({ onJoinClick }) {
       {/* Left - Logo */}
       <div className="flex items-center space-x-2 ">
         <img
-          src="https://www.naxy.ai/assets/Logo-CO9HK8uL.svg"
+          src="/Logo-CO9HK8uL.svg"
           alt="Athene"
           className="h-15 w-15"
         />
