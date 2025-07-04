@@ -24,7 +24,7 @@ function Home() {
       {/* Video Section */}
       <div className="flex-1 rounded-3xl overflow-hidden shadow-lg">
         <video
-          src="https://www.naxy.ai/Videos/video.mp4"
+          src="/video.mp4"
           autoPlay
           loop
           muted
