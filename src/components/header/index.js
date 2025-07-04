@@ -36,7 +36,7 @@ export default function Navbar({ onJoinClick }) {
         <a href="#roadmap" className="hover:text-[#7ce8eb] cursor-pointer">
           Contact Us
         </a>
-        <a href="#faqs" className="hover:text-[#7ce8eb] cursor-pointer">
+        <a href="/dashboard" className="hover:text-[#7ce8eb] cursor-pointer">
           Dashboard
         </a>
         {/* Dropdown */}

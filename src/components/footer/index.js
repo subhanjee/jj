@@ -1,62 +1,61 @@
-"use client";
-
-// import { DiscordLogoIcon } from "@radix-ui/react-icons";
-// import { SiX } from "react-icons/si";
+'use client';
+import React from 'react';
+import {
+  Twitter,
+  Youtube,
+  Send, // for Telegram
+  FileText, // for Medium
+} from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-r from-yellow-400 via-orange-500 to-orange-600 text-white p-10 overflow-hidden">
-      {/* Custom notched corners */}
-      <div className="absolute inset-x-0 top-0 h-10 bg-black">
-        <div className="w-full h-10 bg-[linear-gradient(to_right,transparent_49%,black_49%,black_51%,transparent_51%)]"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
-        {/* Left Section */}
-        <div className="text-center md:text-left">
-        
-          <h1 className="text-3xl md:text-5xl font-bold font-mono p-5">
-            Make Bitcoin Mass Adopt
-          </h1>
-          <p className="text-sm md:text-base">
-            Engage, collaborate, and connect with thousands of Satochainer globally
-          </p>
+    <footer className="bg-[#041725]  text-white py-16 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+        {/* Logo */}
+        <div className="flex-shrink-0">
+          <img src="/Logo-CO9HK8uL.svg" alt="Naxy Logo" className="h-16 w-16" />
         </div>
 
-        {/* Right Section - Icons */}
-        <div className="flex items-center gap-4 mt-2">
-          <a
-            href="https://discord.com/invite/H8VCYKgunu"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-br from-orange-600 to-yellow-400 p-3 rounded-lg shadow-md"
-          >
-            <img src="https://satochain.io/images/icon/discord.svg" alt="Discord" className="w-7 h-5" />
-          </a>
-          <a
-            href="https://twitter.com/SatochainL2"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-br from-orange-600 to-yellow-400 p-3 rounded-lg shadow-md"
-          >
-            <img src="https://satochain.io/images/icon/twitter.svg" alt="Discord" className="w-7 h-5" />
-          </a>
+        {/* Links */}
+        <div className="flex flex-col sm:flex-row gap-10 text-sm md:text-base">
+          <div>
+            <h4 className="font-semibold mb-2">Quick Link</h4>
+            <ul className="space-y-1 text-gray-300">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-2">Resources</h4>
+            <ul className="space-y-1 text-gray-300">
+              <li><a href="#">Whitepaper</a></li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Email */}
+        <div className="flex-shrink-0">
+          <h4 className="text-xl md:text-2xl font-semibold">info@naxy.ai</h4>
         </div>
       </div>
 
-      {/* Bottom Links */}
-      <div className="relative z-10 mt-10 text-sm flex flex-col md:flex-row justify-between items-center border-t border-white/20 pt-4 gap-4">
-        <p>© 2025 Satochain. All right reserved
-        </p>
-        <div className="flex gap-6">
-          <a href="#" className="hover:underline">
-            Privacy policy
+      {/* Bottom Row */}
+      <div className="mt-10 flex flex-col md:flex-row justify-between items-center border-t border-white/10 pt-6 text-sm text-gray-300">
+        <p>©2024 NAXY. All rights reserved</p>
+        <div className="flex space-x-4 mt-4 md:mt-0 text-white">
+          <a href="#" aria-label="Medium" className="hover:text-teal-300 transition">
+            <FileText size={20} />
           </a>
-          <a href="#" className="hover:underline">
-            Explorer
+          <a href="#" aria-label="Telegram" className="hover:text-teal-300 transition">
+            <Send size={20} />
           </a>
-          <a href="#" className="hover:underline">
-            Satochain Bounty Program
+          <a href="#" aria-label="YouTube" className="hover:text-teal-300 transition">
+            <Youtube size={20} />
+          </a>
+          <a href="#" aria-label="Twitter" className="hover:text-teal-300 transition">
+            <Twitter size={20} />
           </a>
         </div>
       </div>

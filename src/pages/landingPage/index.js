@@ -15,6 +15,7 @@ import NaxyPresale from "@/src/components/preSale";
 import AboutNaxy from "@/src/components/aboutUs";
 import HowItWorks from "@/src/components/howWork";
 import FeatureComparison from "@/src/components/compareFeatures";
+import TrustedPartners from "@/src/components/partnerLogos";
 
 function LandingPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -26,7 +27,7 @@ function LandingPage() {
       <div className="flex flex-col items-center justify-center text-white">
         <Home />
 
-        <div className="min-h-screen w-full flex flex-col lg:flex-row items-center justify-center gap-8 px-12 py-12 text-white">
+        {/* <div className="min-h-screen w-full flex flex-col lg:flex-row items-center justify-center gap-8 px-12 py-12 text-white">
           {!isAuthenticated ? (
             <>
               <HeroSection />
@@ -38,7 +39,7 @@ function LandingPage() {
               <USDTDeposit />
             </>
           )}
-        </div>
+        </div> */}
       </div>
       <NaxyPresale />
       <AboutNaxy />
@@ -47,6 +48,7 @@ function LandingPage() {
       <Unlocking />
       <FeatureComparison/>
       <Roadmap />
+      <TrustedPartners />
       <Faqs />
       <Footer />
 

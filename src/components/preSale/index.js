@@ -41,7 +41,7 @@ export default function Home() {
           {["Days", "Hours", "Min", "Sec"].map((label) => (
             <button
               key={label}
-              className="bg-gradient-to-br from-[#7ce8eb] to-[#136673] text-white rounded-lg px-5 py-2 md:px-8 md:py-3 text-lg font-semibold"
+              className="bg-gradient-to-br from-[#7ce8eb] to-[#136673] text-white rounded-lg px-3 py-2 md:px-8 md:py-3 text-md md:text-lg font-semibold"
             >
               {label}
             </button>
